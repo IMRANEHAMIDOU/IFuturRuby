@@ -1,60 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AphaSoft</title>
-    <script src="/index.js"></script>
-    <style type="text/tailwindcss">
-        * {
-            box-sizing: border-box;
+    <title>AlphaCode</title>
+    <script src="/index.js" defer></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("hidden");
         }
-        @layer base{
-            li{
-                @apply hover:text-green-400
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            li a {
+                @apply hover:text-green-400 transition-colors duration-200 ease-in-out;
             }
         }
     </style>
 </head>
 
-<body class="container bg-black text-white py-4 px-40">
-    <h1 class="text-[50px]">Bienvenu sur <span class="text-green-400">AlphaCode</span></h1>
-    <div class="flex justify-between pt-8">
-        <div class="backend">
-            <h3 class="text-[25px]">Projets Backend Ruby</h3>
-            <li class="p-2 text-lg">
-                <a href="/isogram">Determiner si un mot ou une phrase est un isogram ou pas</a>
-            </li>
-            <li class="p-2 text-lg">
-                <a href="/calculator">Une calculatrice simple avec les opérations de base</a>
-            </li>
-            <li class="p-2 text-lg">
-                <a href="/adn">Calculer la distance entre 2 ADN</a>
-            </li>
-            <li class="p-2 text-lg">
-                <a href="/students">Gestion des élèves</a>
-            </li>
-            <li class="p-2 text-lg">
-                <a href="/help">ResistorDecoder</a>
-            </li>
-            <li class="p-2 text-lg">
-                <a href="/recorder">ResistorDecoder 2</a>
-            </li>
-            <li class="p-2 text-lg">
-                <a href="/blog">Blog</a>
-            </li>
+<body class="bg-black text-white py-6 px-6 sm:px-12 md:px-24 lg:px-40">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center bg-gray-900 px-6 py-4 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-green-400">AlphaCode</h2>
+        <div class="md:hidden">
+            <button onclick="toggleMenu()" class="focus:outline-none">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-        <div class="font-end">
-            <h3 class="text-[25px]">Projets Font-end</h3>
-            <li class="p-2 text-lg">
-                <a href="/dashbord">Dashbord avec tailwind css</a>
-            </li>
-        </div>
-    </div>
-    <footer class="w-[100%] h-[50px] text-green-400 flex justify-center items-center block">
-        Hamidou Souley Imrane 2025
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="/">Accueil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu mobile -->
+    <ul id="menu" class="hidden flex flex-col space-y-4 mt-4 p-4 bg-gray-800 rounded-lg md:hidden">
+        <li><a href="/">Accueil</a></li>
+    </ul>
+
+    <!-- Titre -->
+    <header class="text-center mt-10">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide">
+            Bienvenue sur <span class="text-green-400">AlphaCode</span>
+        </h1>
+    </header>
+
+    <!-- Profil -->
+    <section class="flex justify-center mt-8">
+        <img src="/imgs/moi.png" alt="Photo de profil" class="h-32 md:h-40 rounded-[20px] border-1 border-green-400 shadow-lg">
+    </section>
+
+    <!-- Projets -->
+    <main class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <!-- Projets Backend -->
+        <section class="bg-gray-900 p-6 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">Projets Backend Ruby</h3>
+            <ul class="space-y-2">
+                <li><a href="/academix">Présentation ACADEMIX</a></li>
+                <li><a href="/isogram">Déterminer si un mot est un isogramme</a></li>
+                <li><a href="/calculator">Calculatrice simple</a></li>
+                <li><a href="/adn">Distance entre 2 ADN</a></li>
+                <li><a href="/help">ResistorDecoder</a></li>
+                <li><a href="/recorder">ResistorDecoder 2</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </section>
+
+        <!-- Projets Frontend -->
+        <section class="bg-gray-900 p-6 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">Projets Frontend</h3>
+            <ul class="space-y-2">
+                <li><a href="/dashboard">Dashboard avec Tailwind CSS</a></li>
+                <li><a href="/tp1js">TP1 JS</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-green-400 mt-12 font-semibold py-4">
+        © 2025 Hamidou Souley Imrane
     </footer>
+
 </body>
 
 </html>
