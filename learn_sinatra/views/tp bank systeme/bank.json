@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Carlos"
+    },
+    {
+      "id": 2,
+      "name": "Imrane"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "account_number": 85002,
+      "account_state": true,
+      "account_blance": 10000,
+      "user": 1
+    },
+    {
+      "id": 2,
+      "account_number": 85003,
+      "account_state": false,
+      "account_blance": 0,
+      "user": 1
+    },
+    {
+      "id": 3,
+      "account_number": 85004,
+      "account_state": true,
+      "account_blance": 0,
+      "user": 2
+    }
+  ],
+  "operations": [
+    {
+      "id": 1,
+      "typ": "Dépot",
+      "amount": 50000,
+      "account": 1
+    },
+    {
+      "id": 1,
+      "typ": "Retrait",
+      "amount": 40000,
+      "account": 1
+    }
+  ]
+}

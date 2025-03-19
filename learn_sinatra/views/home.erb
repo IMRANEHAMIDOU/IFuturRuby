@@ -1,90 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaCode</title>
-    <script src="/index.js" defer></script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("menu").classList.toggle("hidden");
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer base {
-            li a {
-                @apply hover:text-green-400 transition-colors duration-200 ease-in-out;
-            }
-        }
-    </style>
+    <title>AphaCode - ResistorDecoder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-black text-white py-6 px-6 sm:px-12 md:px-24 lg:px-40">
+<body class="bg-black text-white flex flex-col min-h-screen  md:px-4">
 
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center bg-gray-900 px-6 py-4 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold text-green-400">AlphaCode</h2>
-        <div class="md:hidden">
-            <button onclick="toggleMenu()" class="focus:outline-none">
-                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </div>
-        <ul class="hidden md:flex space-x-6">
-            <li><a href="/">Accueil</a></li>
-        </ul>
-    </nav>
-
-    <!-- Menu mobile -->
-    <ul id="menu" class="hidden flex flex-col space-y-4 mt-4 p-4 bg-gray-800 rounded-lg md:hidden">
-        <li><a href="/">Accueil</a></li>
-    </ul>
-
-    <!-- Titre -->
+    <!-- Header -->
     <header class="text-center mt-10">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide">
             Bienvenue sur <span class="text-green-400">AlphaCode</span>
         </h1>
     </header>
 
-    <!-- Profil -->
+    <!-- Section Profil -->
     <section class="flex justify-center mt-8">
-        <img src="/imgs/moi.png" alt="Photo de profil" class="h-32 md:h-40 rounded-[20px] border-1 border-green-400 shadow-lg">
+        <img src="/imgs/moi.png" 
+             alt="Photo de profil"
+             class="h-32 md:h-40 rounded-[20px] border-1 border-green-400 shadow-lg">
     </section>
 
-    <!-- Projets -->
-    <main class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
-        <!-- Projets Backend -->
+    <!-- Main Content -->
+    <main class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 flex-grow">
+        <!-- Section Projets Backend Ruby -->
         <section class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <h3 class="text-2xl font-semibold mb-4 text-green-400">Projets Backend Ruby</h3>
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">
+                Projets Backend Ruby
+            </h3>
             <ul class="space-y-2">
-                <li><a href="/academix">Présentation ACADEMIX</a></li>
+                <!-- <li><a href="/academix">Présentation ACADEMIX</a></li> -->
                 <li><a href="/isogram">Déterminer si un mot est un isogramme</a></li>
                 <li><a href="/calculator">Calculatrice simple</a></li>
                 <li><a href="/adn">Distance entre 2 ADN</a></li>
-                <li><a href="/help">ResistorDecoder</a></li>
-                <li><a href="/recorder">ResistorDecoder 2</a></li>
+                <li><a href="/recorder1">ResistorDecoder</a></li>
+                <li><a href="/recorder2">ResistorDecoder 2</a></li>
                 <li><a href="/blog">Blog</a></li>
+                <li><a href="/bank">Back système - Gestion de banque</a></li>
             </ul>
         </section>
 
-        <!-- Projets Frontend -->
+        <!-- Section Projets Frontend -->
         <section class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <h3 class="text-2xl font-semibold mb-4 text-green-400">Projets Frontend</h3>
+            <h3 class="text-2xl font-semibold mb-4 text-green-400">
+                Projets Frontend
+            </h3>
             <ul class="space-y-2">
                 <li><a href="/dashboard">Dashboard avec Tailwind CSS</a></li>
                 <li><a href="/tp1js">TP1 JS</a></li>
+                <li><a href="/calc">Calculatrice</a></li>
+                <li><a href="/citation">Générateur de citations aléatoires</a></li>
+                <li><a href="/jeu_mystere">Jeu du nombre mystère</a></li>
             </ul>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-green-400 mt-12 font-semibold py-4">
-        © 2025 Hamidou Souley Imrane
+    <footer class="bg-gray-800 text-center text-white py-4 mt-10">
+        &copy; 2025 AphaSoft - Tous droits réservés
     </footer>
 
 </body>
